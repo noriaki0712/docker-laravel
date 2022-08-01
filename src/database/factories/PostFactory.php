@@ -18,7 +18,7 @@ class PostFactory extends Factory
     {
         return [
         'title'=> $this->faker->randomElement(["おはよう","こんにちわ","こんばんわ"]),
-        'detail' => $this->faker->randomElement(["おはよう"*6,"こんにちわ"*6,"こんばんわ"*6]),
+        'detail' => $this->faker->randomElement([str_repeat("おはよう",6),str_repeat("こんにちわ",6), str_repeat("こんばんわ",6)]),
         'created_at' =>now(),
         'updated_at'=>now()
         ];
